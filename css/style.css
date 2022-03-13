@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding:0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header */
+
+header {
+    background-color: #0e2a85;
+}
+
+.header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-titulo {
+    color: #ffffff;
+    text-align: left;
+    font-size: 1.3em;
+    padding: 0 15px;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 5px 15px;
+    padding: 15px 18px; 
+}
+
+nav ul li a {
+    color: #ffffff;
+    padding: 10px;
+}
+/* fin header */
+
+
+.carousel {
+    display: flex;
+    justify-content: center;
+}
+
+/* fechas partidos */
+
+.partidos {
+    padding: 50px 0;   
+}
+
+.partidos-titulo {
+    text-align: center;
+    color: #1f1f1f;
+    padding: 0 0 0.8em 0;
+}
+
+.partidos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0.7em;
+}
+
+.partido-anterior {
+    border: 1px solid #e6e6e6;
+    border-radius: 20px;
+}
+
+.div-header {
+    height: 45px;
+    background-color: #0e2a85;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border-radius: 20px 20px 0 0;
+}
+
+.div-body {
+    margin: 20px 15px 20px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultado {
+    height: 20px;
+    width: 50px;
+    background-color: #0e2a85;
+    margin: 20px;
+    padding: 10px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #10175c;
+}
+
+.div-datos {
+   text-align: center;   
+}
+
+.proximo-partido {
+    border: 1px solid #e6e6e6;
+    border-radius: 20px;
+}
+
+.div-header-dos {
+    height: 45px;
+    background-color: #10175c;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border-radius: 20px 20px 0 0;    
+}
+
+.div-body-dos {
+    margin: 20px 15px 20px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+/*fin section partidos*/
+
+
+/*section tienda */
+.tienda {
+    background-color: #f0f0f0;
+    padding: 25px;
+}
+
+.tienda-titulo {
+    color: #10175c;
+    text-align: center;
+    padding: 0 0 15px 0;
+}
+
+.cards-grid {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    padding: 1em 0;
+}
+
+.card-producto {
+    background-color: #ffffff;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid #e6e6e6;
+    border-radius: 15px;
+}
+
+.card-texto {
+    background-color: #e6e6e6;
+    color: #1f1f1f;
+    padding: 15px;
+}
+
+.boton-container {
+    display: flex;
+    justify-content: center;
+}
+
+.boton-tienda {
+    background-color: #0e2a85;
+    margin: 5px;
+    padding: 16px;
+    border-radius: 20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.card-producto img {
+    width: 100%;
+}
+
+/* fin section tienda */
+
+.gif-socio {
+    background-color: #ffffff;
+}
+
+
+/*footer*/
+footer {
+    background-color: #0e2a85;
+    height: 120px;
+}
+
+footer p {
+    color: #ffffff;
+    padding: 20px 0 10px 0;
+    text-align: center;
+}
+
+.footer-rrss {
+   display: flex;
+   justify-content: center;
+}
+
+.rrss-icon {
+    margin: 0 5px;
+}
+/* fin footer */
+
+
+.titulos-h2 {
+    text-align: center;
+    color: #1f1f1f;
+    margin: 30px 0 0 30px;
+}
+
+
+/*tienda*/
+.tienda-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+    padding: 1em 0 2em 0;
+}
+
+.card-producto h4, p {
+    padding: 5px 0;
+}
+
+/*fin tienda*/
+
+
+/*primera*/
+.primera-carousel-jugadores {
+    padding: 20px 0 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.primera-fixture {
+    background-color: #f0f0f0;
+    padding: 30px;
+    text-align: center;
+}
+
+section ul {
+    list-style: none
+}
+
+.fixture-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(5, 40px);
+    gap: 15px 50px;
+    padding: 15px 0;
+}
+
+.fixture-item {
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid #e6e6e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*fin primera*/
+
+/*actividades*/
+
+.actividades-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    padding: 15px 0 25px 0;
+}
+
+.card-actividades {
+    background-color: #2042b1;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.card-actividades h3 {
+    color: #ffffff;
+    padding: 15px 0;
+}
+
+/*fin actividades */
+
+
+
+/*el club*/
+.club-main p {
+    margin: 30px 0;
+
+}
+
+.estadio-grid {
+    display: grid;
+    grid-template-areas:
+    "img iframe"
+    "img2 img2";
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.estadio-grid-platea {
+    grid-area: img;
+}
+
+.estadio-grid-iframe {
+    grid-area: iframe;
+}
+
+.estadio-grid-campo {
+    grid-area: img2;
+}
+
+
+.club-remanso {
+    background-color: #f0f0f0;
+    margin: 25px 0 0 0;
+    text-align: center;
+}
+
+/*fin el club*/
+
+
+/*mobile - BUENA SUERTE INOCENTE PALOMITA */
+
+@media (max-width: 500px) {
+
+    .partidos-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .tienda-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .fixture-grid {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .actividades-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .estadio-grid {
+        grid-template-areas:
+        "img"
+        "iframe"
+        "img2";
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+@media (min-width: 501px) and (max-width:1050px) {
+
+    .partidos-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tienda-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fixture-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .actividades-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .estadio-grid {
+        grid-template-areas:
+        "img"
+        "iframe"
+        "img2";
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+}
