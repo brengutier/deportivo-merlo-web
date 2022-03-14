@@ -26,7 +26,6 @@ header {
 }
 
 .header {
-    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,6 +35,7 @@ header {
 .logo {
     display: flex;
     align-items: center;
+    padding: 10px 0;
 }
 
 .header-titulo {
@@ -49,6 +49,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: right;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -91,6 +92,11 @@ nav ul li a {
 .partido-anterior {
     border: 1px solid #e6e6e6;
     border-radius: 20px;
+    transition: all 1s;    
+}
+
+.partido-anterior:hover {
+    transform: scale(1.03);
 }
 
 .div-header {
@@ -131,6 +137,11 @@ nav ul li a {
 .proximo-partido {
     border: 1px solid #e6e6e6;
     border-radius: 20px;
+    transition: all 1s;
+}
+
+.proximo-partido:hover {
+    transform: scale(1.03);
 }
 
 .div-header-dos {
@@ -199,6 +210,15 @@ nav ul li a {
     border-radius: 20px;
     color: #ffffff;
     text-decoration: none;
+}
+
+.boton-tienda:hover {
+    animation: cambioColor 1s;
+}
+
+@keyframes cambioColor {
+    0% {background-color: #0e2a85;}
+    100% {background-color: #10175c;}
 }
 
 .card-producto img {
@@ -313,6 +333,11 @@ section ul {
 .card-actividades h3 {
     color: #ffffff;
     padding: 15px 0;
+    transition: all 1s;
+}
+
+.actividades-grid article:hover {
+    transform: scale(1.04);
 }
 
 /*fin actividades */
@@ -351,6 +376,38 @@ section ul {
     background-color: #f0f0f0;
     margin: 25px 0 0 0;
     text-align: center;
+    padding: 10px 0 20px 0;
+}
+
+.club-remanso h2 {
+    padding: 1em;
+}
+
+.remanso-grid {
+    display: grid;
+    grid-template-areas:
+    "img1 img2"
+    "img3 img3"
+    "iframe iframe";
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.remanso-grid-mapa {
+    grid-area: iframe;
+}
+
+.remanso-grid-uno {
+    grid-area: img1;
+}
+
+
+.remanso-grid-dos {
+    grid-area: img2;
+}
+
+.remanso-grid-tres {
+    grid-area: img3;
 }
 
 /*fin el club*/
@@ -387,6 +444,20 @@ section ul {
         "img2";
         grid-template-columns: repeat(1, 1fr);
     }
+    
+    .remanso-grid {
+        display: grid;
+        grid-template-areas:
+        "img1"
+        "img2"
+        "img3"
+        "iframe";
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container {
+        width: 95%;
+    }
 }
 
 
@@ -420,5 +491,13 @@ section ul {
         grid-template-columns: repeat(1, 1fr);
     }
 
-
+    .remanso-grid {
+        display: grid;
+        grid-template-areas:
+        "img1"
+        "img2"
+        "img3"
+        "iframe";
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
