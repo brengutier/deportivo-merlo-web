@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+@import "../components/header";
+@import "../components/cardsPartidos";
+
+a {
+    text-decoration: none;
+}
+
+.titulos-h2 {
+    font-size: 1.3em;
+    font-weight: 600;
+    text-align: center;
+    color: #1f1f1f;
+    margin: 20px 0;
+}
+
+.partidos{
+    padding: 50px 0;
+    h2{
+        font-size: 1.5em;
+        font-weight: 600;
+        text-align: center;
+        color: #1f1f1f;
+        padding: 0 0 0.8em 0;
+    }
+}
