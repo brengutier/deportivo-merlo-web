@@ -101,6 +101,23 @@ header nav div div ul li .header-text {
   margin: 5px 0 0 0;
 }
 
+footer {
+  background-color: #0e2a85;
+  height: 120px;
+}
+footer p {
+  color: #ffffff;
+  padding: 20px 0 10px 0;
+  text-align: center;
+}
+footer .footer-rrss {
+  display: flex;
+  justify-content: center;
+}
+footer .footer-rrss .rrss-icon {
+  margin: 0 5px;
+}
+
 a {
   text-decoration: none;
 }
@@ -122,6 +139,69 @@ a {
   text-align: center;
   color: #1f1f1f;
   padding: 0 0 0.8em 0;
+}
+
+.tienda {
+  background-color: #f0f0f0;
+  padding: 25px;
+}
+.tienda .tienda-titulo {
+  color: #10175c;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: center;
+  padding: 0 0 15px 0;
+}
+.tienda .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  padding: 1em 0;
+}
+.tienda .cards-grid .card-producto {
+  background-color: #ffffff;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #e6e6e6;
+  border-radius: 15px;
+}
+.tienda .cards-grid .card-producto .card-texto {
+  background-color: #e6e6e6;
+  color: #1f1f1f;
+  padding: 10px 0 5px 0;
+}
+.tienda .cards-grid .card-producto .card-texto h4 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 5px 0 0 0;
+}
+.tienda .cards-grid .card-producto .card-texto p {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+.tienda .boton-container {
+  display: flex;
+  justify-content: center;
+}
+.tienda .boton-container .boton-tienda {
+  background-color: #0e2a85;
+  margin: 5px;
+  padding: 16px;
+  border-radius: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.tienda .boton-container .boton-tienda:hover {
+  animation: cambioColor 1s;
+}
+@keyframes cambioColor {
+  0% {
+    background-color: #0e2a85;
+  }
+  100% {
+    background-color: #10175c;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

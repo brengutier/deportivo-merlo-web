@@ -1,0 +1,18 @@
+@import "../base/variables";
+
+footer {
+    background-color: $bg-color;
+    height: 120px;
+    p {
+    color: #ffffff;
+    padding: 20px 0 10px 0;
+    text-align: center;
+    }
+    .footer-rrss {
+        display: flex;
+        justify-content: center;
+        .rrss-icon{
+            margin: 0 5px;
+        }
+    }
+}
