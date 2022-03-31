@@ -18,15 +18,16 @@ body {
 @import "../base/variables";
 @import "../base/extends";
 @import "../base/mixin";
+@import "../base/maps";
 
 a {
     text-decoration: none;
 }
 
 .titulos-h2 {
-    font-size: 1.3em;
-    font-weight: 600;
-    text-align: center;
+    font-size: map-get($titlesdos, f-size);
+    font-weight: map-get($titlesdos, f-weight);
+    text-align: map-get($titlesdos, t-align);
     color: #1f1f1f;
     margin: 20px 0;
 }
@@ -35,9 +36,9 @@ a {
 .partidos{
     padding: 50px 0;
     h2{
-        font-size: 1.5em;
-        font-weight: 600;
-        text-align: center;
+        font-size: map-get($titlesdos, f-size);
+        font-weight: map-get($titlesdos, f-weight);
+        text-align: map-get($titlesdos, t-align);
         color: #1f1f1f;
         padding: 0 0 0.8em 0;
     }
@@ -49,9 +50,9 @@ a {
     padding: 25px;
     .tienda-titulo {
         color: #10175c;
-        font-size: 1.5em;
-        font-weight: 600;
-        text-align: center;
+        font-size: map-get($titlesdos, f-size);
+        font-weight: map-get($titlesdos, f-weight);
+        text-align: map-get($titlesdos, t-align);
         padding: 0 0 15px 0;
     }
     .cards-grid {
