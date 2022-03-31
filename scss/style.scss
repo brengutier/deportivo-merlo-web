@@ -48,11 +48,11 @@ a {
     background-color: #f0f0f0;
     padding: 25px;
     .tienda-titulo {
-    color: #10175c;
-    font-size: 1.5em;
-    font-weight: 600;
-    text-align: center;
-    padding: 0 0 15px 0;
+        color: #10175c;
+        font-size: 1.5em;
+        font-weight: 600;
+        text-align: center;
+        padding: 0 0 15px 0;
     }
     .cards-grid {
         display:grid;
@@ -119,6 +119,9 @@ a {
         border: 1px solid #e6e6e6;
         width: 100%;
         @include cards (#ffffff, center, hidden, 15px);
+        img {
+            width: 100%;
+        }
         h4 {
             font-size: 1.2em;
             font-weight: 600;

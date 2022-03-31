@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch scss/style.scss css/style.css"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/brengutier/deportivo-merlo-web/issues"
   },
-  "homepage": "https://github.com/brengutier/deportivo-merlo-web#readme"
+  "homepage": "https://github.com/brengutier/deportivo-merlo-web#readme",
+  "devDependencies": {
+    "sass": "^1.49.10"
+  }
 }

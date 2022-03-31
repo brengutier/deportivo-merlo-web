@@ -303,6 +303,9 @@ a {
   overflow: hidden;
   border-radius: 15px;
 }
+.tienda-grid .card-producto img {
+  width: 100%;
+}
 .tienda-grid .card-producto h4 {
   font-size: 1.2em;
   font-weight: 600;
