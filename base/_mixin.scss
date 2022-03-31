@@ -1,0 +1,6 @@
+@mixin cards($bg-color, $text, $overflow, $b-radius) {
+    background-color: $bg-color;
+    text-align: $text;
+    overflow: $overflow;
+    border-radius: $b-radius;
+}

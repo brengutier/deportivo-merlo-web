@@ -14,6 +14,10 @@ body {
 @import "../components/header";
 @import "../components/cardsPartidos";
 @import "../components/footer";
+@import "../components/elClub";
+@import "../base/variables";
+@import "../base/extends";
+@import "../base/mixin";
 
 a {
     text-decoration: none;
@@ -27,6 +31,7 @@ a {
     margin: 20px 0;
 }
 
+/* inicio */
 .partidos{
     padding: 50px 0;
     h2{
@@ -55,12 +60,9 @@ a {
         gap: 1em;
         padding: 1em 0;
         .card-producto {
-            background-color: #ffffff;
-            text-align: center;
+            @include cards (#ffffff, center, hidden, 15px);
             margin: 0;
-            overflow: hidden;
             border: 1px solid #e6e6e6;
-            border-radius: 15px;
             .card-texto {
                 background-color: #e6e6e6;
                 color: #1f1f1f;
@@ -75,6 +77,12 @@ a {
                     font-weight: 400;
                 }
             }
+        }
+        @media (max-width: 540px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        @media (min-width: 541px) and (max-width:1140px) {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
     .boton-container {
@@ -97,3 +105,90 @@ a {
         }
     }
 }
+/* fin inicio */
+
+/*tienda*/
+.tienda-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+    padding: 1em 0 2em 0;
+    .card-producto {
+        margin: 0;
+        border: 1px solid #e6e6e6;
+        width: 100%;
+        @include cards (#ffffff, center, hidden, 15px);
+        h4 {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin: 5px 0 0 0;
+            padding: 5px 0;
+        }
+        p {
+            font-size: 1.2em;
+            font-weight: 400;
+            padding: 5px 0;
+        }
+    }
+    @media (max-width: 540px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    @media (min-width: 541px) and (max-width:1140px) {   
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* fin tienda */
+
+/* primera */
+.primera-jugadores {
+    padding: 0 0 15px 0;
+}
+
+.primera-fixture {
+    background-color: #f0f0f0;
+    padding: 30px;
+    text-align: center;
+    div ul {
+        list-style: none
+    }
+    .fixture-grid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(5, 40px);
+        gap: 15px 50px;
+        padding: 15px 0;
+        .fixture-item {
+            height: 40px;
+            background-color: #ffffff;
+            border: 1px solid #e6e6e6;
+            @extend %flex;
+        }
+
+        @media (max-width: 540px) {
+            grid-template-columns: repeat(1,1fr);
+        }
+        @media (min-width: 541px) and (max-width:1140px) {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+
+/* fin primera */
+
+/* actividades */
+.actividades {
+    padding: 0 0 30px 0;
+    .card-actividades {
+        @include cards (#2042b1, center, hidden, 20px);
+        transition: all 1s;
+        &:hover {
+            transform: scale(1.04);
+        }
+        h3 {
+            color: #ffffff;
+            padding: 15px 0;
+        }
+    }
+}
+/*fin actividades */

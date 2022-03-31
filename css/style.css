@@ -11,7 +11,7 @@ body {
 header nav {
   background-color: #0e2a85;
 }
-header nav div .header-titulo {
+header nav div div .header-titulo {
   color: #ffffff;
   text-align: left;
   font-size: 1.3em;
@@ -28,21 +28,17 @@ header nav div div ul li .header-text {
   padding: 10px;
 }
 
+.primera-fixture .fixture-grid .fixture-item, .div-body .resultado, .div-body, .div-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .partido-der-izq {
   transition: all 1s;
 }
 .partido-der-izq:hover {
   transform: scale(1.03);
-}
-.partido-der-izq .div-header {
-  height: 3.5em;
-  background-color: #0e2a85;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  border-radius: 20px 20px 0 0;
 }
 
 .partido-centro {
@@ -52,33 +48,22 @@ header nav div div ul li .header-text {
 .partido-centro:hover {
   transform: scale(1.03);
 }
-.partido-centro .div-header-dos {
-  height: 3.5em;
-  background-color: #0e2a85;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  border-radius: 20px 20px 0 0;
-}
-
-.titulos-h3 {
-  font-size: 1.3em;
-  font-weight: 500;
-  margin: 5px 0 0 0;
-}
 
 .border {
   border: 1px solid #e6e6e6;
   border-radius: 0 0 20px 20px;
 }
 
+.div-header {
+  height: 3.5em;
+  background-color: #0e2a85;
+  padding: 5px;
+  color: #ffffff;
+  border-radius: 20px 20px 0 0;
+}
+
 .div-body {
   margin: 20px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .div-body .resultado {
   background-color: #e6e6e6;
@@ -86,10 +71,13 @@ header nav div div ul li .header-text {
   margin: 20px;
   padding: 8px;
   color: #1f1f1f;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: 1px solid #f0f0f0;
+}
+
+.titulos-h3 {
+  font-size: 1.3em;
+  font-weight: 500;
+  margin: 5px 0 0 0;
 }
 
 .div-datos {
@@ -118,6 +106,88 @@ footer .footer-rrss .rrss-icon {
   margin: 0 5px;
 }
 
+.club-main div p {
+  margin: 30px 0;
+}
+
+.estadio-grid {
+  display: grid;
+  grid-template-areas: "img iframe" "img2 img2";
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.estadio-grid-platea {
+  grid-area: img;
+}
+
+.estadio-grid-iframe {
+  grid-area: iframe;
+}
+
+.estadio-grid-campo {
+  grid-area: img2;
+}
+
+.club-remanso {
+  background-color: #f0f0f0;
+  margin: 25px 0 0 0;
+  text-align: center;
+  padding: 10px 0 20px 0;
+}
+
+.remanso-grid {
+  display: grid;
+  grid-template-areas: "img1 img2" "img3 img3" "iframe iframe";
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.remanso-grid-mapa {
+  grid-area: iframe;
+}
+
+.remanso-grid-uno {
+  grid-area: img1;
+}
+
+.remanso-grid-dos {
+  grid-area: img2;
+}
+
+.remanso-grid-tres {
+  grid-area: img3;
+}
+
+@media (max-width: 540px) {
+  .estadio-grid {
+    grid-template-areas: "img" "iframe" "img2";
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .remanso-grid {
+    display: grid;
+    grid-template-areas: "img1" "img2" "img3" "iframe";
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 541px) and (max-width: 1140px) {
+  .estadio-grid {
+    grid-template-areas: "img" "iframe" "img2";
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .remanso-grid {
+    grid-template-areas: "img1" "img2" "img3" "iframe";
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.primera-fixture .fixture-grid .fixture-item, .div-header, .div-body, .div-body .resultado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 a {
   text-decoration: none;
 }
@@ -130,6 +200,7 @@ a {
   margin: 20px 0;
 }
 
+/* inicio */
 .partidos {
   padding: 50px 0;
 }
@@ -161,10 +232,10 @@ a {
 .tienda .cards-grid .card-producto {
   background-color: #ffffff;
   text-align: center;
-  margin: 0;
   overflow: hidden;
-  border: 1px solid #e6e6e6;
   border-radius: 15px;
+  margin: 0;
+  border: 1px solid #e6e6e6;
 }
 .tienda .cards-grid .card-producto .card-texto {
   background-color: #e6e6e6;
@@ -179,6 +250,16 @@ a {
 .tienda .cards-grid .card-producto .card-texto p {
   font-size: 1.2em;
   font-weight: 400;
+}
+@media (max-width: 540px) {
+  .tienda .cards-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 541px) and (max-width: 1140px) {
+  .tienda .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .tienda .boton-container {
   display: flex;
@@ -203,5 +284,104 @@ a {
     background-color: #10175c;
   }
 }
+
+/* fin inicio */
+/*tienda*/
+.tienda-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1em;
+  padding: 1em 0 2em 0;
+}
+.tienda-grid .card-producto {
+  margin: 0;
+  border: 1px solid #e6e6e6;
+  width: 100%;
+  background-color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.tienda-grid .card-producto h4 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 5px 0 0 0;
+  padding: 5px 0;
+}
+.tienda-grid .card-producto p {
+  font-size: 1.2em;
+  font-weight: 400;
+  padding: 5px 0;
+}
+@media (max-width: 540px) {
+  .tienda-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 541px) and (max-width: 1140px) {
+  .tienda-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* fin tienda */
+/* primera */
+.primera-jugadores {
+  padding: 0 0 15px 0;
+}
+
+.primera-fixture {
+  background-color: #f0f0f0;
+  padding: 30px;
+  text-align: center;
+}
+.primera-fixture div ul {
+  list-style: none;
+}
+.primera-fixture .fixture-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 40px);
+  gap: 15px 50px;
+  padding: 15px 0;
+}
+.primera-fixture .fixture-grid .fixture-item {
+  height: 40px;
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+}
+@media (max-width: 540px) {
+  .primera-fixture .fixture-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 541px) and (max-width: 1140px) {
+  .primera-fixture .fixture-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* fin primera */
+/* actividades */
+.actividades {
+  padding: 0 0 30px 0;
+}
+.actividades .card-actividades {
+  background-color: #2042b1;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: all 1s;
+}
+.actividades .card-actividades:hover {
+  transform: scale(1.04);
+}
+.actividades .card-actividades h3 {
+  color: #ffffff;
+  padding: 15px 0;
+}
+
+/*fin actividades */
 
 /*# sourceMappingURL=style.css.map */
