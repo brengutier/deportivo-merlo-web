@@ -22,11 +22,11 @@
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">            
-                <div>
+            <div class="container">            
+                <div class="container-titulo">
                     <img src="./multimedia/images/deportivo-merlo-escudo.svg" alt="logo-deportivo-merlo" width="50px">
               
-                    <a class="header-titulo" href="index.html">Deportivo Merlo</a>
+                    <h1>Deportivo Merlo</h1>
                 </div>
               
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,13 +59,13 @@
     <!-- Carrusel -->
  
     <main>
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselDesktop" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselDesktop" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselDesktop" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselDesktop" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            <div class="carousel-inner d-none d-md-block">
+            <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="./multimedia/images/carrousel-foto-uno.jpg" class="d-block w-100" alt="foto platea popular entrenamiento">
                 </div>
@@ -76,7 +76,23 @@
                     <img src="./multimedia/images/carrousel-foto-tres.jpg" class="d-block w-100" alt="foto platea popular con hinchas">
                 </div>
             </div>
-            <div class="carousel-inner d-md-none">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselDesktop" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselDesktop" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div> 
+
+        <div id="carouselMobile" class="carousel slide d-md-none" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselMobile" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="./multimedia/images/index-mobile.jpg" class="d-block w-100" alt="foto platea popular entrenamiento">
                 </div>
@@ -87,15 +103,15 @@
                     <img src="./multimedia/images/index-mobile-tres.jpg" class="d-block w-100" alt="foto platea popular con hinchas">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselMobile" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselMobile" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
-        </div> 
+        </div>
     </main>
                    
 
@@ -175,7 +191,7 @@
     <!-- Tienda -->
     <section class="tienda">
         <div class="container">
-            <h2 class="tienda-titulo">• Depo Mania •</h2>
+            <h2 class="tienda-titulo">Depo Mania</h2>
             <div class="cards-grid">
                 <!-- Card1 -->
                 <div class="card-producto">
@@ -214,7 +230,7 @@
         
             <!--Botón-->
             <div class="boton-container">
-               <a href="pages/tienda.html" class="boton-tienda">Ir a Tienda</a>
+               <a href="pages/tienda.html" class="boton-tienda">Ir a tienda</a>
             </div>            
         </div>
     </section>

@@ -4,22 +4,29 @@ header{
     nav{
         background-color: $bg-primary;
         div{
-            div {
-                .header-titulo {
+            .container-titulo {
+                display: flex;
+                align-items: center;
+                h1 {
+                    margin: 0;
+                    font-size: 1.5em;
                     color: #ffffff;
                     text-align: left;
-                    font-size: 1.3em;
-                    font-weight: 700;
-                    padding: 0 15px;
+                    font-weight: 500;
+                    padding: 0 0 0 25px;
                 }
             }
             div ul li {
                 list-style: none;
-                margin: 5px 15px;
-                padding: 10px 18px;
+                margin: 5px 0;
+                padding: 10px 15px;
                 .header-text {
                     color: #ffffff;
                     padding: 10px;
+                    transition-duration: 0.4s;
+                    &:hover {
+                    font-weight: 500;
+                    }
                 }
             }
         }

@@ -39,6 +39,7 @@
         padding: 8px;
         color: #1f1f1f;
         border: 1px solid $bg-secondary;
+        border-radius: 10px;
         @extend %flex;
     }
 }
@@ -53,7 +54,7 @@
     text-align: center;
     h4{
         font-size: 1.1em;
-        font-weight: 400;
-        margin: 5px 0 0 0;
+        font-weight: 500;
+        margin: 5px 0;
     }
 }

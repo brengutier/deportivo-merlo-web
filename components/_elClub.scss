@@ -15,8 +15,17 @@
     gap: 10px;
 }
 
+.hover-zoom {
+    height: 453.11px;
+    overflow: hidden;
+}
+
 .estadio-grid-platea {
     grid-area: img;
+    transition: transform .5s ease;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .estadio-grid-iframe {

@@ -11,21 +11,30 @@ body {
 header nav {
   background-color: #0e2a85;
 }
-header nav div div .header-titulo {
+header nav div .container-titulo {
+  display: flex;
+  align-items: center;
+}
+header nav div .container-titulo h1 {
+  margin: 0;
+  font-size: 1.5em;
   color: #ffffff;
   text-align: left;
-  font-size: 1.3em;
-  font-weight: 700;
-  padding: 0 15px;
+  font-weight: 500;
+  padding: 0 0 0 25px;
 }
 header nav div div ul li {
   list-style: none;
-  margin: 5px 15px;
-  padding: 10px 18px;
+  margin: 5px 0;
+  padding: 10px 15px;
 }
 header nav div div ul li .header-text {
   color: #ffffff;
   padding: 10px;
+  transition-duration: 0.4s;
+}
+header nav div div ul li .header-text:hover {
+  font-weight: 500;
 }
 
 .primera-fixture .fixture-grid .fixture-item, .div-body .resultado, .div-body, .div-header {
@@ -42,7 +51,6 @@ header nav div div ul li .header-text {
 }
 
 .partido-centro {
-  padding: 0;
   transition: all 1s;
 }
 .partido-centro:hover {
@@ -72,6 +80,7 @@ header nav div div ul li .header-text {
   padding: 8px;
   color: #1f1f1f;
   border: 1px solid #f0f0f0;
+  border-radius: 10px;
 }
 
 .titulos-h3 {
@@ -85,8 +94,8 @@ header nav div div ul li .header-text {
 }
 .div-datos h4 {
   font-size: 1.1em;
-  font-weight: 400;
-  margin: 5px 0 0 0;
+  font-weight: 500;
+  margin: 5px 0;
 }
 
 footer {
@@ -117,8 +126,17 @@ footer .footer-rrss .rrss-icon {
   gap: 10px;
 }
 
+.hover-zoom {
+  height: 453.11px;
+  overflow: hidden;
+}
+
 .estadio-grid-platea {
   grid-area: img;
+  transition: transform 0.5s ease;
+}
+.estadio-grid-platea:hover {
+  transform: scale(1.1);
 }
 
 .estadio-grid-iframe {
@@ -193,7 +211,7 @@ a {
 }
 
 .titulos-h2 {
-  font-size: 1.5em;
+  font-size: 1.7em;
   font-weight: 600;
   text-align: center;
   color: #1f1f1f;
@@ -202,23 +220,23 @@ a {
 
 /* inicio */
 .partidos {
-  padding: 50px 0;
+  padding-block: 80px;
 }
 .partidos h2 {
-  font-size: 1.5em;
+  font-size: 1.7em;
   font-weight: 600;
   text-align: center;
   color: #1f1f1f;
-  padding: 0 0 0.8em 0;
+  padding: 0 0 1em 0;
 }
 
 .tienda {
   background-color: #f0f0f0;
-  padding: 25px;
+  padding: 80px 25px;
 }
 .tienda .tienda-titulo {
-  color: #10175c;
-  font-size: 1.5em;
+  color: #1f1f1f;
+  font-size: 1.7em;
   font-weight: 600;
   text-align: center;
   padding: 0 0 15px 0;
@@ -238,18 +256,18 @@ a {
   border: 1px solid #e6e6e6;
 }
 .tienda .cards-grid .card-producto .card-texto {
-  background-color: #e6e6e6;
+  background-color: #ffffff;
   color: #1f1f1f;
   padding: 10px 0 5px 0;
 }
 .tienda .cards-grid .card-producto .card-texto h4 {
   font-size: 1.2em;
-  font-weight: 600;
-  margin: 5px 0 0 0;
+  font-weight: 400;
+  margin: 5px 0;
 }
 .tienda .cards-grid .card-producto .card-texto p {
   font-size: 1.2em;
-  font-weight: 400;
+  font-weight: 600;
 }
 @media (max-width: 540px) {
   .tienda .cards-grid {
@@ -267,22 +285,16 @@ a {
 }
 .tienda .boton-container .boton-tienda {
   background-color: #0e2a85;
-  margin: 5px;
-  padding: 16px;
-  border-radius: 20px;
+  margin: 24px 5px 0;
+  padding: 14px 24px;
+  border-radius: 14px;
   color: #ffffff;
   text-decoration: none;
+  transition-duration: 0.4s;
 }
 .tienda .boton-container .boton-tienda:hover {
-  animation: cambioColor 1s;
-}
-@keyframes cambioColor {
-  0% {
-    background-color: #0e2a85;
-  }
-  100% {
-    background-color: #10175c;
-  }
+  background-color: #1f1f1f;
+  font-weight: 500;
 }
 
 /* fin inicio */
@@ -302,6 +314,10 @@ a {
   text-align: center;
   overflow: hidden;
   border-radius: 15px;
+  transition: box-shadow 0.3s;
+}
+.tienda-grid .card-producto:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 .tienda-grid .card-producto img {
   width: 100%;
@@ -353,6 +369,10 @@ a {
   height: 40px;
   background-color: #ffffff;
   border: 1px solid #e6e6e6;
+  transition: box-shadow 0.3s;
+}
+.primera-fixture .fixture-grid .fixture-item:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 @media (max-width: 540px) {
   .primera-fixture .fixture-grid {
@@ -371,7 +391,7 @@ a {
   padding: 0 0 30px 0;
 }
 .actividades .card-actividades {
-  background-color: #2042b1;
+  background-color: #e6e6e6;
   text-align: center;
   overflow: hidden;
   border-radius: 20px;
@@ -381,8 +401,34 @@ a {
   transform: scale(1.04);
 }
 .actividades .card-actividades h3 {
-  color: #ffffff;
+  color: #1f1f1f;
   padding: 15px 0;
+}
+.actividades .card-actividades-uno {
+  position: relative;
+}
+.actividades .card-actividades-uno .img-actividades {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.actividades .card-actividades-uno .overlay {
+  position: absolute;
+  bottom: 0;
+  background: black;
+  background: rgba(0, 0, 0, 0.5);
+  /* Black see-through */
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-actividades-uno:hover .overlay {
+  opacity: 1;
 }
 
 /*fin actividades */
