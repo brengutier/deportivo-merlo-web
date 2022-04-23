@@ -6,11 +6,15 @@
     }
 }
 
+.club-estadio {
+    padding: 20px 0 50px 0;
+}
+
 .estadio-grid {
     display: grid;
     grid-template-areas:
-    "img iframe"
-    "img2 img2";
+    "img img2"
+    "iframe iframe";
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
@@ -20,20 +24,35 @@
     overflow: hidden;
 }
 
+.hover-zoom-remanso {
+    height: 368px;
+    overflow: hidden;
+}
+
 .estadio-grid-platea {
     grid-area: img;
+}
+
+.estadio-platea {
     transition: transform .5s ease;
     &:hover {
         transform: scale(1.1);
     }
 }
 
-.estadio-grid-iframe {
+.estadio-grid-campo {
+    grid-area: img2;
+}
+
+.estadio-grid-mapa {
     grid-area: iframe;
 }
 
-.estadio-grid-campo {
-    grid-area: img2;
+.estadio-campo {
+    transition: transform .5s ease;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .club-remanso {
@@ -61,21 +80,41 @@
     grid-area: img1;
 }
 
+.remanso-entrada {
+    transition: transform .5s ease;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
 
 .remanso-grid-dos {
     grid-area: img2;
+}
+
+.remanso-colonia {
+    transition: transform .5s ease;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .remanso-grid-tres {
     grid-area: img3;
 }
 
+.remanso-cancha {
+    transition: transform .5s ease;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
 @media (max-width: 540px) {
     .estadio-grid {
         grid-template-areas:
         "img"
-        "iframe"
-        "img2";
+        "img2"
+        "iframe";
         grid-template-columns: repeat(1, 1fr);
     }
     

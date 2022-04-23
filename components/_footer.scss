@@ -1,18 +1,29 @@
 @import "../base/variables";
+@import "../base/extends";
 
 footer {
     background-color: $bg-primary;
-    height: 120px;
-    p {
-    color: #ffffff;
-    padding: 20px 0 10px 0;
+    padding: 70px 0;
     text-align: center;
+    color: white;
+    .logo-csdm {
+        display: block;
+        margin: 0 auto;
+        width: 80px;
+        padding-bottom: 20px;
     }
-    .footer-rrss {
-        display: flex;
-        justify-content: center;
-        .rrss-icon{
-            margin: 0 5px;
+    .list-inline .list-inline-item {
+        padding: 10px 15px;
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 18px;
+            padding: 10px;
+            border-bottom: 3px solid transparent;
+            &:hover {
+                border-bottom: 3px solid #ffffff;
+            }
         }
     }
 }
+

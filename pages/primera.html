@@ -37,16 +37,16 @@
                         <a class="header-text link-light" aria-current="page" href="../index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="header-text link-light" href="tienda.html">Tienda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="header-text link-light" href="primera.html">Primera</a>
+                        <a class="header-text link-light active" href="primera.html">Primera</a>
                     </li>
                     <li class="nav-item">
                         <a class="header-text link-light" href="actividades.html">Actividades</a>
                     </li>
                     <li class="nav-item">
                         <a class="header-text link-light" href="el-club.html">El Club</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="header-text link-light" href="tienda.html">Tienda</a>
                     </li>
                 </ul>
           </div>
@@ -56,11 +56,13 @@
 
 	<main class="primera-jugadores">
 		<div class="container">
-			<h2 class="titulos-h2">Plantel Masculino</h2>
-			<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-				<div class="carousel-inner d-none d-md-block">
+			<h2 class="titulos-h2">Primera</h2>
+			<h3 class="titulo-plantel">Plantel Masculino</h3>
+
+			<div id="carouselDesktop" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
+				<div class="carousel-inner">
 					<div class="carousel-item active">
-					  <img src="../multimedia/images/banner-prueba.jpg" class="d-block w-100" alt="...">
+					  <img src="../multimedia/images/banner-prueba.jpg" class="d-block w-100" alt="datos jugadores pera y gutierrez">
 					</div>
 					<div class="carousel-item">
 					  <img src="../multimedia/images/banner-prueba.jpg" class="d-block w-100" alt="...">
@@ -69,22 +71,29 @@
 					  <img src="../multimedia/images/banner-prueba.jpg" class="d-block w-100" alt="...">
 					</div>
 				</div>
-				<div class="carousel-inner d-md-none">
-					<div class="carousel-item active">
-					  <img src="../multimedia/images/banner-mobile.jpg" class="d-block w-100" alt="...">
-					</div>
-					<div class="carousel-item">
-					  <img src="../multimedia/images/banner-mobile-dos.jpg" class="d-block w-100" alt="...">
-					</div>
-					<div class="carousel-item">
-					  <img src="" class="d-block w-100" alt="...">
-					</div>
-				</div>
-				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselDesktop" data-bs-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 					<span class="visually-hidden">Previous</span>
 				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselDesktop" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>               
+			</div>
+			<div id="carouselMobile" class="carousel slide d-md-none" data-bs-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+					  <img src="../multimedia/images/banner-mobile.jpg" class="d-block w-100" alt="datos jugador pera">
+					</div>
+					<div class="carousel-item">
+					  <img src="../multimedia/images/banner-mobile-dos.jpg" class="d-block w-100" alt="datos jugador gutierrez">
+					</div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselMobile" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselMobile" data-bs-slide="next">
 					<span class="carousel-control-next-icon" aria-hidden="true"></span>
 					<span class="visually-hidden">Next</span>
 				</button>               
@@ -95,10 +104,10 @@
   <!--Fixture-->
   	<section class="primera-fixture">
     	<div class="container">
-      		<h3 class="titulos-h3">Fixture</h3>
+      		<h2 class="titulos-h2">Fixture</h2>
       		<ul class="fixture-grid">
-        		<li class="fixture-item">Dep. Merlo 1 - 1 Acassuso</li>
-        		<li class="fixture-item">Dep. Merlo 2 - 0 Arg. Quilmes</li>
+        		<li class="fixture-item bold">Dep. Merlo 1 - 1 Acassuso</li>
+        		<li class="fixture-item bold">Dep. Merlo 2 - 0 Arg. Quilmes</li>
        	 		<li class="fixture-item">Fecha 3: vs. JJ Urquiza (L)</li>
         		<li class="fixture-item">Fecha 4: vs. Cañuelas (V)</li>
         		<li class="fixture-item">Fecha 5: vs. Comunicaciones (L)</li>
@@ -119,16 +128,32 @@
   	</section>
 
 
-  <!-- Footer -->
-  	<footer>
+	<footer>
 		<div class="container">
-			<p>Seguinos</p>                
-			<div class="footer-rrss">
-				<!-- Enlace a RRSS -->
-				<a href="https://www.instagram.com/csdeportivomerlo/" class="rrss-icon"><img src="../multimedia/images/icono-instagram-mini.png" alt="instagram"></a>
-				<a href="https://www.facebook.com/cdeportivomerlo" class="rrss-icon"><img src="../multimedia/images/icono-fb-mini.png" alt="facebook"></a>
-				<a href="https://api.whatsapp.com/send?phone=5491156546949" class="rrss-icon"><img src="../multimedia/images/icono-whatsapp-mini.png" alt="whatsapp"></a>  
-			</div>
+            <img src="../multimedia/images/deportivo-merlo-escudo.svg" class="logo-csdm" alt="logo deportivo merlo">
+			<ul class="list-inline">
+				<li class="list-inline-item footer-menu">
+					<a href="../index.html">Inicio</a>
+				</li>	
+				<li class="list-inline-item footer-menu">	
+					<a href="../pages/primera.html">Primera</a>
+				</li>	
+				<li class="list-inline-item footer-menu">	
+	        		<a href="../pages/actividades.html">Actividades</a>
+	        	</li>	
+	        	<li class="list-inline-item footer-menu">	
+	       			<a href="../pages/el-club.html">El Club</a>
+	       		</li>	
+	       		<li class="list-inline-item footer-menu">	
+	        		<a href="../pages/tienda.html">Tienda</a>
+	        	</li>
+			</ul>
+			<ul class="list-inline">
+				<li class="list-inline-item"><a href="https://www.instagram.com/csdeportivomerlo/" target="_blank"><img src="../multimedia/images/ig.svg" alt="instagram" height="20px"></a></li>
+				<li class="list-inline-item"><a href="https://www.facebook.com/cdeportivomerlo" target="_blank"><img src="../multimedia/images/fb.svg" alt="facebook" height="20px"></a></li>
+				<li class="list-inline-item"><a href="https://api.whatsapp.com/send?phone=5491156546949" target="_blank"><img src="../multimedia/images/wsp.svg" alt="whatsapp" height="20px"></a></li>
+			</ul>
+			<small>Club Social y Deportivo Merlo® - Todos los derechos reservados</small>
 		</div>
 	</footer>
 

@@ -1,0 +1,39 @@
+@import "../base/mixin";
+
+.tienda-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+    padding: 1em 0 2em 0;
+    .card-producto {
+        margin: 0;
+        border: 1px solid #e6e6e6;
+        width: 100%;
+        @include cards (#ffffff, center, hidden, 15px);
+        transition: box-shadow .3s;
+            &:hover {
+                box-shadow: 0 0 11px rgba(33,33,33,.2);
+            }
+        img {
+            width: 100%;
+        }
+        h4 {
+            font-size: 1.2em;
+            font-weight: 400;
+            margin: 5px 0 0 0;
+            padding: 5px 0;
+        }
+        p {
+            font-size: 1.2em;
+            font-weight: 600;
+            padding: 5px 0;
+        }
+    }
+    @media (max-width: 540px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    @media (min-width: 541px) and (max-width:1140px) {   
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

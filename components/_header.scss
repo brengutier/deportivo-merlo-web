@@ -20,15 +20,22 @@ header{
                 list-style: none;
                 margin: 5px 0;
                 padding: 10px 15px;
+                &::after {
+                    transition-duration: all 0.5s;
+                }
                 .header-text {
                     color: #ffffff;
+                    font-size: 18px;
                     padding: 10px;
-                    transition-duration: 0.4s;
                     &:hover {
-                    font-weight: 500;
+                        border-bottom: 3px solid #ffffff;
                     }
                 }
             }
         }
     }
+}
+
+.active {
+    border-bottom: 3px solid #ffffff;
 }

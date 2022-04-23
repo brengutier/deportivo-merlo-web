@@ -14,6 +14,9 @@ body {
 @import "../components/header";
 @import "../components/cardsPartidos";
 @import "../components/footer";
+@import "../components/tienda";
+@import "../components/primera";
+@import "../components/actividades";
 @import "../components/elClub";
 @import "../base/variables";
 @import "../base/extends";
@@ -29,7 +32,7 @@ a {
     font-weight: map-get($titlesdos, f-weight);
     text-align: map-get($titlesdos, t-align);
     color: #1f1f1f;
-    margin: 20px 0;
+    padding: 40px 0 18px 0;
 }
 
 /* inicio */
@@ -64,6 +67,10 @@ a {
             @include cards (#ffffff, center, hidden, 15px);
             margin: 0;
             border: 1px solid #e6e6e6;
+            transition: box-shadow .3s;
+            &:hover {
+                box-shadow: 0 0 11px rgba(33,33,33,.2);
+            }
             .card-texto {
                 background-color: #ffffff;
                 color: #1f1f1f;
@@ -86,144 +93,56 @@ a {
             grid-template-columns: repeat(2, 1fr);
         }
     }
-    .boton-container {
-        display: flex;
-        justify-content: center;
-        .boton-tienda {
-            background-color: #0e2a85;
-            margin: 24px 5px 0;
-            padding: 14px 24px;
-            border-radius: 14px;
-            color: #ffffff;
-            text-decoration: none;
-            transition-duration: 0.4s;
-            &:hover {
-                background-color: #1f1f1f;
-                font-weight: 500;
-            }
-        }
-    }
-}
-/* fin inicio */
-
-/*tienda*/
-.tienda-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 1em;
-    padding: 1em 0 2em 0;
-    .card-producto {
-        margin: 0;
-        border: 1px solid #e6e6e6;
-        width: 100%;
-        @include cards (#ffffff, center, hidden, 15px);
-        transition: box-shadow .3s;
-            &:hover {
-                box-shadow: 0 0 11px rgba(33,33,33,.2);
-            }
-        img {
-            width: 100%;
-        }
-        h4 {
-            font-size: 1.2em;
-            font-weight: 600;
-            margin: 5px 0 0 0;
-            padding: 5px 0;
-        }
-        p {
-            font-size: 1.2em;
-            font-weight: 400;
-            padding: 5px 0;
-        }
-    }
-    @media (max-width: 540px) {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    @media (min-width: 541px) and (max-width:1140px) {   
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-/* fin tienda */
-
-/* primera */
-.primera-jugadores {
-    padding: 0 0 15px 0;
 }
 
-.primera-fixture {
-    background-color: #f0f0f0;
-    padding: 30px;
-    text-align: center;
-    div ul {
-        list-style: none
-    }
-    .fixture-grid {
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(5, 40px);
-        gap: 15px 50px;
-        padding: 15px 0;
-        .fixture-item {
-            height: 40px;
-            background-color: #ffffff;
-            border: 1px solid #e6e6e6;
-            @extend %flex;
-            transition: box-shadow .3s;
-            &:hover {
-                box-shadow: 0 0 11px rgba(33,33,33,.2);
-            }
-        }
-
-        @media (max-width: 540px) {
-            grid-template-columns: repeat(1,1fr);
-        }
-        @media (min-width: 541px) and (max-width:1140px) {
-            grid-template-columns: repeat(2,1fr);
-        }
-    }
-}
-
-/* fin primera */
-
-/* actividades */
-.actividades {
-    padding: 0 0 30px 0;
-    .card-actividades {
-        @include cards (#e6e6e6, center, hidden, 20px);
-        transition: all 1s;
+.boton-container {
+    display: flex;
+    justify-content: center;
+    .boton-tienda {
+        background-color: #0e2a85;
+        margin: 24px 5px 0;
+        padding: 14px 24px;
+        border-radius: 14px;
+        color: #ffffff;
+        text-decoration: none;
+        transition-duration: 0.4s;
         &:hover {
-            transform: scale(1.04);
-        }
-        h3 {
-            color: #1f1f1f;
-            padding: 15px 0;
-        }
-    }
-    .card-actividades-uno {
-        position: relative;
-        .img-actividades {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-        .overlay {
-            position: absolute;
-            bottom: 0;
-            background: rgb(0, 0, 0);
-            background: rgba(0, 0, 0, 0.5); /* Black see-through */  
-            width: 100%;
-            transition: .5s ease;
-            opacity:0;
-            color: #ffffff;
-            font-size: 20px;
-            padding: 20px;
-            text-align: center;
+            background-color: #1f1f1f;
+            font-weight: 500;
         }
     }
 }
 
-.card-actividades-uno:hover .overlay {
-    opacity: 1;
-  }
-/*fin actividades */
+.contacto {
+    padding: 90px 0;
+    .contacto-form {
+        @media (min-width: 768px) and (max-width:990px) {
+            display: flex;
+            justify-content: center;
+        }
+        .imagen-contacto{
+            padding-right: 20px;
+        }
+        .contacto-h2 {
+            font-size: map-get($titlesdos, f-size);
+            font-weight: map-get($titlesdos, f-weight);
+            text-align: start;
+            color: #1f1f1f;
+            padding: 40px 0 18px 0;
+            }
+        .subtitulo {
+            font-weight: 500;
+            font-size: 16px;
+            color: #1f1f1f;
+            line-height: 24px;
+            padding-bottom: 35px;
+        }
+        
+    }
+}
+
+.form-group {
+    padding: 10px 0;
+}
+
+/* fin inicio */
