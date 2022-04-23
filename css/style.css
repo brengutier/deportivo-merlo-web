@@ -379,6 +379,14 @@ footer .list-inline .list-inline-item a:hover {
     grid-template-areas: "img1" "img2" "img3" "iframe";
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .remanso-h6 {
+    font-weight: 500;
+    font-size: 16px;
+    color: #1f1f1f;
+    line-height: 24px;
+    padding: 0 15px 30px 15px;
+  }
 }
 @media (min-width: 541px) and (max-width: 1140px) {
   .estadio-grid {
@@ -389,6 +397,14 @@ footer .list-inline .list-inline-item a:hover {
   .remanso-grid {
     grid-template-areas: "img1" "img2" "img3" "iframe";
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .remanso-h6 {
+    font-weight: 500;
+    font-size: 16px;
+    color: #1f1f1f;
+    line-height: 24px;
+    padding: 0 15px 30px 15px;
   }
 }
 .div-header, .div-body, .div-body .resultado, .primera-fixture div .fixture-grid .fixture-item {
