@@ -128,8 +128,8 @@ a {
             font-weight: map-get($titlesdos, f-weight);
             text-align: start;
             color: #1f1f1f;
-            padding: 40px 0 18px 0;
-            }
+            padding: 40px 0 18px 0;    
+        }
         .subtitulo {
             font-weight: 500;
             font-size: 16px;
@@ -137,9 +137,9 @@ a {
             line-height: 24px;
             padding-bottom: 35px;
         }
-        
     }
 }
+
 
 .form-group {
     padding: 10px 0;

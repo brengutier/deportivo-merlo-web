@@ -274,12 +274,12 @@ footer .list-inline .list-inline-item a:hover {
 }
 
 .hover-zoom {
-  height: 453.11px;
+  height: 100%;
   overflow: hidden;
 }
 
 .hover-zoom-remanso {
-  height: 368px;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -314,6 +314,14 @@ footer .list-inline .list-inline-item a:hover {
   margin: 25px 0 0 0;
   text-align: center;
   padding: 10px 0 20px 0;
+}
+
+.remanso-h6 {
+  font-weight: 500;
+  font-size: 16px;
+  color: #1f1f1f;
+  line-height: 24px;
+  padding: 0 80px 30px 80px;
 }
 
 .remanso-grid {
@@ -374,7 +382,7 @@ footer .list-inline .list-inline-item a:hover {
 }
 @media (min-width: 541px) and (max-width: 1140px) {
   .estadio-grid {
-    grid-template-areas: "img" "iframe" "img2";
+    grid-template-areas: "img" "img2" "iframe";
     grid-template-columns: repeat(1, 1fr);
   }
 
